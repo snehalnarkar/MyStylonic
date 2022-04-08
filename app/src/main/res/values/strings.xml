@@ -1,0 +1,126 @@
+<resources>
+    <string name="app_name">MyStylonic</string>
+    <string name="field_empty">Field can\'t be empty</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="welcome">Welcome</string>
+    <string name="register">Register</string>
+    <string name="don_t_have_an_account">Don\'t_have_an_account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="product_name">product Name</string>
+    <string name="default_price">$0.00</string>
+    <string name="quantity">0</string>
+
+
+    <string name="dress1">
+        Red solid woven fit and flare tiered dress with lace detailing, has a round neck, short sleeves,
+        button closure, an attached lining, and flared hem. Size and Fit Semi-Fit ,The model is wearing a size S,
+        Material and Care Material Poly Chiffon
+        Hand Wash
+    </string>
+    <string name="dress2">Sleeveless dress in a cotton weave with frill trimmed shoulder straps, buttons down the front
+        and covered elastication at the back. Gathered seam at the waist and a flared skirt.
+        Material and Care Cotton ,Machine wash
+    </string>
+    <string name="dress3">Red and black checked casual shirt, has a spread collar, button placket, 1 pocket, long
+        sleeves, curved hem
+
+        Size and Fit
+        Regular Fit
+        The model is wearing a size 40
+    </string>
+    <string name="dress4">The saree comes with an unstitched blouse piece
+        The blouse worn by the model might be for modelling purpose only. Check the image of the blouse piece to
+        understand how the actual blouse piece looks like.
+        Dry-clean
+    </string>
+    <string name="dress5">Navy blue Geometric print fit and flare dress
+        Round neck
+        Short, cap sleeves
+        Knee length in flared hem
+        Cotton fabric
+
+        Material and Care
+        Machine Wash
+    </string>
+    <string name="dress6">Striped
+        Mandarin collar
+        Long, roll-up sleeves
+        Straight shape with regular style
+        Knee length with straight hem
+        Machine weave regular
+        Pure cotton
+        Material and Care
+        Machine wash
+    </string>
+    <string name="dress7">Navy blue floral print fit and flare dress
+        Round neck
+        Short, cap sleeves
+        Knee length in flared hem
+        Velvet fabric
+
+    </string>
+    <string name="dress8">Blue printed casual shirt, has a mandarin collar collar, button placket, long sleeves, curved
+        hem
+        Size and Fit
+        Regular fit
+        Material and Care
+        Cotton
+        Machine-wash
+    </string>
+    <string name="dress9">Jazz up your collection of casual ensembles with this stylish top. Flaunting power shoulders
+        and a textured finish, it will lend you a structured and sharp look.
+        Chic fuchsia pink tone
+        Smart-looking V-neck
+        Structured power shoulders
+        Polyester, machine wash
+
+    </string>
+
+    <string name="dress10">T-shirt for boys
+        Typography printed
+        Regular length
+        Round neck
+        Short, regular sleeves
+        Knitted cotton fabric
+        size and Fit
+        Regular Fit
+        Material and Care
+        Machine Wash
+
+    </string>
+    <string name="dress11">Blue solid opaque Casual shirt ,has a band collar, button placket, 1 pocket, short regular
+        sleeves, curved hem
+        Size and Fit
+        Brand Fit: New
+        Fit: Regular Fit
+        Material and Care
+        Cotton
+        Machine Wash
+    </string>
+    <string name="dress12">Jazz up your collection of casual ensembles with this stylish top. Flaunting power shoulders
+        and a textured finish, it will lend you a structured and sharp look.
+        Chic fuchsia pink tone
+        Smart-looking V-neck
+        Structured power shoulders
+        Polyester, machine wash
+
+    </string>
+
+    <string name="dress13">Red and white printed woven fit and flare dress, has a round neck, three-quarter sleeves,
+        concealed zip closure, an attached lining, flared hem
+
+        Size and Fit
+        Semi-Fit
+        Material and Care
+        Polyester
+        Machine-wash
+    </string>
+    <string name="babiva_fashion">babiva_fashion</string>
+
+</resources>

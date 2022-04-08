@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "702917740467",
+    "project_id": "mystylonic",
+    "storage_bucket": "mystylonic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702917740467:android:9b1dac38a5731cfcde6dc6",
+        "android_client_info": {
+          "package_name": "com.example.mystylonic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702917740467-l44b1e7q9og6o7p6cv8ahh8fto1bi58c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbzpv_rkiVEv4fxbSfmE6fOwDFv6HFV8c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702917740467-l44b1e7q9og6o7p6cv8ahh8fto1bi58c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

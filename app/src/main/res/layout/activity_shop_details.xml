@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShopDetailsActivity">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ShopDetailsActivity">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="16dp"
+                android:padding="16dp"
+                android:text="@string/babiva_fashion"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"/>
+        <ImageView
+                android:id="@+id/det_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/w_dress4"
+                android:layout_below="@+id/title"
+                android:padding="12dp" tools:ignore="MissingConstraints"/>
+
+        <TextView
+                android:id="@+id/det_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dress1"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginTop="36dp"
+                android:layout_below="@+id/det_image"
+                android:textColor="@color/black" tools:ignore="MissingConstraints"/>
+        <TextView
+                android:id="@+id/det_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹519 "
+                android:textSize="23sp"
+                android:textColor="@color/pink"
+                android:textStyle="bold"
+                android:layout_marginTop="310dp"
+                android:padding="10dp"/>
+        <Button
+                android:id="@+id/btn_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:layout_below="@id/det_detail"
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="130dp"/>
+
+
+    </RelativeLayout>
+</ScrollView>
