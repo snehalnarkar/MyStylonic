@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mystylonic" >
-    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyStylonic.NoActionBar" >
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".add_cart_activity"
+            android:exported="true" />
         <activity
             android:name=".ShopDetailsActivity"
             android:exported="true" />
@@ -33,7 +39,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" >
-
         </activity>
     </application>
 

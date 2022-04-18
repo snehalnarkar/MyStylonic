@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".LoginActivity"
-android:background="@drawable/image">
+        android:background="@drawable/image">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -23,13 +23,16 @@ android:background="@drawable/image">
             app:layout_constraintVertical_bias="0.424">
 
 
+
         <TextView
                 android:layout_width="152dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="@string/welcome"
+                android:text="@string/title_login"
+                android:gravity="center"
+                android:paddingLeft="10sp"
                 android:textColor="@color/white"
-                android:textSize="32sp"/>
+                android:textSize="@dimen/title_textSize"/>
         <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
@@ -40,11 +43,11 @@ android:background="@drawable/image">
             <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Email"
+                    android:hint="@string/et_hint_email_id"
                     android:background="@color/white"
                     android:inputType="textEmailAddress"
-                    android:drawableStart="@drawable/ic_baseline_email_24"
-                    android:drawablePadding="10dp"/>
+                    android:drawableStart="@drawable/ic_baseline_email2_24"
+                    android:drawablePadding="@dimen/et_textSize"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -62,64 +65,71 @@ android:background="@drawable/image">
                     android:hint="Password"
                     android:background="@color/white"
                     android:inputType="textPassword"
-                    android:drawableStart="@drawable/ic_baseline_lock_24"
+                    android:drawableStart="@drawable/ic_baseline_lock2_24"
                     android:drawablePadding="10dp"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-                android:layout_width="match_parent"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:text="login"
+                android:text="@string/btn_lbl_login"
                 android:paddingVertical="15dp"
                 android:textAllCaps="false"
-                android:backgroundTint="#E9F41C47"
+                android:backgroundTint="@color/colorThemePink"
                 android:textColor="@color/white"
-                android:onClick="loginUser"/>
+                android:textSize="@dimen/btn_textSize"
+                android:onClick="loginUser"
+        />
 
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:layout_gravity="center">
             <TextView
+                    android:id="@+id/tv_don_t_have_an_account"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/clickable_text_view_padding"
                     android:layout_marginEnd="5dp"
-                    android:textStyle="bold"
                     android:text="@string/don_t_have_an_account"
-                    android:textSize="18sp"/>
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/lbl_text_view_textSize"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/register"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
+                    android:textSize="25dp"
                     android:textColor="@color/white"
-                    android:onClick="openRegisterActivity"/>
+                    android:onClick="openRegisterActivity" tools:ignore="TouchTargetSizeCheck"/>
 
         </LinearLayout>
         <TextView
                 android:id="@+id/login_forgot_password_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="80dp"
-                android:text="forgot_password"
-                android:textSize="18sp"
+                android:layout_marginStart="80dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="@dimen/clickable_text_view_padding"
+                android:tooltipText="@string/btn_forgot_password"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:layout_marginTop="10dp"
+                android:text="@string/btn_forgot_password"
+                android:textSize="@dimen/forgot_password_textSize"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="100dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/login_password"/>
         <ProgressBar
                 android:id="@+id/login_progress_bar"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:outlineAmbientShadowColor="@color/colorThemePink"
                 android:visibility="invisible"/>
 
     </LinearLayout>

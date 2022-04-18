@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         passwordTIL = findViewById(R.id.login_password)
 
 
-//        findViewById<TextView>(R.id.login_forgot_password_tv).setOnClickListener { userForgotPassword() }
+       findViewById<TextView>(R.id.login_forgot_password_tv).setOnClickListener { userForgotPassword() }
 
     }
    //Checking if user is logged in already or not
@@ -97,10 +97,10 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
-//        private fun userForgotPassword() {
-//            val forgotDialog = ForgotPassword()
-//          forgotDialog.show(supportFragmentManager, "Forgot Password Dialog")
-//        }
+        private fun userForgotPassword() {
+            val forgotDialog = ForgotPassword()
+          forgotDialog.show(supportFragmentManager, "Forgot Password Dialog")
+        }
 
 }
 
