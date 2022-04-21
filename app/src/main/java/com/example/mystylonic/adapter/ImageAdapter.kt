@@ -1,4 +1,4 @@
-package com.example.mystylonic
+package com.example.mystylonic.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
+import com.example.mystylonic.R
 
 class ImageAdapter(private val imageList : ArrayList<Int> , private val viewPage2: ViewPager2)
     :RecyclerView.Adapter<ImageAdapter.ImageViewHolder>() {

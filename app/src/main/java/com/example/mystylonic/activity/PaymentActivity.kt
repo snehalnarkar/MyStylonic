@@ -1,4 +1,4 @@
-package com.example.mystylonic
+package com.example.mystylonic.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_add_cart.*
+import com.example.mystylonic.R
 
 class PaymentActivity : AppCompatActivity() {
 
@@ -31,6 +31,7 @@ class PaymentActivity : AppCompatActivity() {
         Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show()
 
         }
+
 
     }
 }

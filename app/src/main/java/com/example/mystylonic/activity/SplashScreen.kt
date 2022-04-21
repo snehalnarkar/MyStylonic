@@ -1,4 +1,4 @@
-package com.example.mystylonic
+package com.example.mystylonic.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.os.Handler
 import android.view.WindowManager.LayoutParams.*
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.example.mystylonic.R
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +21,7 @@ class SplashScreen : AppCompatActivity() {
 
 
         val backgroundImg: ImageView =findViewById(R.id.splashscreen)
-        val sideAnimation = AnimationUtils.loadAnimation(this,R.anim.slide)
+        val sideAnimation = AnimationUtils.loadAnimation(this, R.anim.slide)
         backgroundImg.startAnimation(sideAnimation)
 
 

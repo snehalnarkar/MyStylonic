@@ -1,4 +1,4 @@
-package com.example.mystylonic
+package com.example.mystylonic.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,9 +6,11 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mystylonic.R
+import com.example.mystylonic.activity.shop
 
 @Suppress("DEPRECATION")
-class MyAdapter(private val shopList : ArrayList<shop>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class RecyclerAdapter(private val shopList : ArrayList<shop>) : RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 
@@ -33,6 +35,7 @@ class MyAdapter(private val shopList : ArrayList<shop>) : RecyclerView.Adapter<M
         val currentItem = shopList[position]
         holder.image.setImageResource(currentItem.image)
         holder.title.text = currentItem.title
+        holder.size.text = currentItem.size
         holder.price.text = currentItem.price
     }
 
@@ -46,7 +49,7 @@ class MyAdapter(private val shopList : ArrayList<shop>) : RecyclerView.Adapter<M
         val image : ImageView = itemView.findViewById(R.id.item_image)
         val title : TextView = itemView.findViewById(R.id.item_title)
         val price : TextView = itemView.findViewById(R.id.item_price)
-
+        val size  : TextView = itemView.findViewById(R.id.item_size)
         init {
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)

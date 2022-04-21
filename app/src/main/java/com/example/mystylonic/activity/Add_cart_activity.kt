@@ -1,10 +1,11 @@
-package com.example.mystylonic
+package com.example.mystylonic.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.mystylonic.R
 
 class add_cart_activity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class add_cart_activity : AppCompatActivity() {
         }
 
         btn_checkout.setOnClickListener{
-            val intent = Intent(this,PaymentActivity::class.java)
+            val intent = Intent(this, PaymentActivity::class.java)
             startActivity(intent)
             finish()
         }

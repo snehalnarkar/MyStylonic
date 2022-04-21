@@ -1,4 +1,4 @@
-package com.example.mystylonic
+package com.example.mystylonic.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
-import kotlinx.android.synthetic.main.activity_main.*
+import com.example.mystylonic.*
+import com.example.mystylonic.adapter.ImageAdapter
+import com.example.mystylonic.adapter.RecyclerAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,12 +28,16 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var imageId : Array<Int>
     lateinit var title : Array<String>
+    lateinit var size : Array<String>
     lateinit var price : Array<String>
+
     lateinit var shopDetail : Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         init()
         setUpTransformer()
@@ -46,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         val imageView:ImageView = findViewById(R.id.home_add_cart)
-
+        val profile:ImageView =findViewById(R.id.profile)
 
         imageId = arrayOf(
             R.drawable.w_dress4,
@@ -68,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             "Babiva Fashion",
             "KAARIGARI ",
             "Allen Solly",
-            "Kanchipuram Silk Saree",
+            " Silk Saree",
             "Chandrika ",
             "KSH Trendz ",
             "KL Collection ",
@@ -81,11 +87,27 @@ class MainActivity : AppCompatActivity() {
 
         )
 
+        size = arrayOf(
+            "Size : S,M,L",
+            "Size :2-3 years",
+            "Size :M,L,XL",
+            "Size :Regular",
+            "Size :free",
+            "Size :M,L,XL",
+            "Size :4-5 years",
+            "Size :regular",
+            "Size :S,M,L",
+            "Size :XL",
+            "Size :3-4 years",
+            "Size :free",
+            "Size :S,M,L",
+
+            )
         price = arrayOf(
             "₹519 ",
             "₹250",
             "₹1,476",
-            "₹8,816.00",
+            "₹2,816",
             "₹410",
             "₹229",
             "₹220",
@@ -122,9 +144,13 @@ class MainActivity : AppCompatActivity() {
         newArrayList = arrayListOf<shop>()
         getUserData()
 
-
+        profile.setOnClickListener{
+            val intent = Intent(this,ProfileActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
         imageView.setOnClickListener{
-            val intent = Intent(this,add_cart_activity::class.java)
+            val intent = Intent(this, add_cart_activity::class.java)
             startActivity(intent)
             finish()
         }
@@ -135,19 +161,20 @@ class MainActivity : AppCompatActivity() {
 
         for(i in imageId.indices)
         {
-            val shop = shop(imageId[i],title[i],price[i])
+            val shop = shop(imageId[i],title[i],size[i],price[i])
             newArrayList.add(shop)
         }
 
-        var adapter = MyAdapter(newArrayList)
+        var adapter = RecyclerAdapter(newArrayList)
         newRecyclerView.adapter = adapter
-        adapter.setOnItemClickListener(object : MyAdapter.onItemClickListener {
+        adapter.setOnItemClickListener(object : RecyclerAdapter.onItemClickListener {
             override fun onItemClick(position: Int) {
                 //    Toast.makeText(this@MainActivity,"You clicked on item no. $position",Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this@MainActivity,ShopDetailsActivity::class.java)
+                val intent = Intent(this@MainActivity, ShopDetailsActivity::class.java)
                 intent.putExtra("title",newArrayList[position].title)
                 intent.putExtra("imageId",newArrayList[position].image)
+                intent.putExtra("size",newArrayList[position].size)
                 intent.putExtra("price",newArrayList[position].price)
                 intent.putExtra("shopDetails",shopDetail[position])
                 startActivity(intent)

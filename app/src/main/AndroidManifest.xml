@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.mystylonic" >
+          package="com.example.mystylonic">
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MyStylonic.NoActionBar" >
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.MyStylonic.NoActionBar">
         <activity
-            android:name=".PaymentActivity"
-            android:exported="true" />
+                android:name=".activity.ProfileActivity"
+                android:exported="true"/>
         <activity
-            android:name=".add_cart_activity"
-            android:exported="true" />
+                android:name=".activity.PaymentActivity"
+                android:exported="true"/>
         <activity
-            android:name=".ShopDetailsActivity"
-            android:exported="true" />
+                android:name=".activity.add_cart_activity"
+                android:exported="true"/>
         <activity
-            android:name=".MainActivity2"
-            android:exported="true" />
+                android:name=".activity.ShopDetailsActivity"
+                android:exported="true"/>
         <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
+                android:name=".activity.RegisterActivity"
+                android:exported="true"/>
         <activity
-            android:name=".LoginActivity"
-            android:exported="true" />
+                android:name=".activity.LoginActivity"
+                android:exported="true"/>
         <activity
-            android:name=".SplashScreen"
-            android:exported="true" >
+                android:name=".activity.SplashScreen"
+                android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true" >
+                android:name=".activity.MainActivity"
+                android:exported="true">
+
         </activity>
     </application>
 
