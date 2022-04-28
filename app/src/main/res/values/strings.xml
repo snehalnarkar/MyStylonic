@@ -144,5 +144,11 @@
         Machine-wash
     </string>
     <string name="babiva_fashion">babiva_fashion</string>
+    <string name="shop_menu">Shop_menu</string>
+    <string name="account">account</string>
+    <string name="Account">Account</string>
+    <string name="Payment">Payment</string>
+    <string name="profile">Profile</string>
+    <string name="my_cart">my Cart</string>
 
 </resources>

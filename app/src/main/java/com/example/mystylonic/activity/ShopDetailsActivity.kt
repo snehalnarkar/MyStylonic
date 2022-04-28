@@ -21,6 +21,9 @@ class ShopDetailsActivity : AppCompatActivity() {
         val shopPrice : TextView = findViewById(R.id.det_price)
         val btnaddcart : Button =findViewById(R.id.btn_add_to_cart)
         val btnbuy : Button =findViewById(R.id.btn_buy)
+        val backarrow : ImageView = findViewById(R.id.backarrow)
+
+
 
         val bundle : Bundle? = intent.extras
 
@@ -35,6 +38,15 @@ class ShopDetailsActivity : AppCompatActivity() {
         shopDet.text = shopDetail
         shopsize.text = size
         shopPrice.text = price
+
+
+
+
+        backarrow.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         btnaddcart.setOnClickListener{
             val intent = Intent(this, add_cart_activity::class.java)

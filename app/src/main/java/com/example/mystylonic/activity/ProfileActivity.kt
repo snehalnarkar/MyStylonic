@@ -9,12 +9,16 @@ import android.widget.Toast
 import com.example.mystylonic.R
 
 class ProfileActivity : AppCompatActivity() {
+
+    //view binding
+    private lateinit var  binding :ActivityProfileBindling
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
         val backarrow : ImageView = findViewById(R.id.backarrow)
-        val btnprofile : Button =findViewById(R.id.btnprofile)
+       val btnprofile : Button =findViewById(R.id.btnprofile)
 
         backarrow.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
@@ -29,4 +33,8 @@ class ProfileActivity : AppCompatActivity() {
 
 
     }
+}
+
+class ActivityProfileBindling {
+
 }

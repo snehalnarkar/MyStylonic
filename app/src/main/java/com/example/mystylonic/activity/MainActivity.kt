@@ -6,7 +6,10 @@ import android.os.Handler
 import android.os.Looper
 import android.view.View
 import android.widget.ImageView
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
@@ -15,8 +18,14 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.mystylonic.*
 import com.example.mystylonic.adapter.ImageAdapter
 import com.example.mystylonic.adapter.RecyclerAdapter
+import com.google.android.material.navigation.NavigationView
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var toggle: ActionBarDrawerToggle
+    private lateinit var navView: NavigationView
+    private lateinit var drawerLayout: DrawerLayout
 
     private lateinit var viewPager2: ViewPager2
     private lateinit var  handler: Handler
@@ -38,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
-
+        loadNavigationDrawer()
         init()
         setUpTransformer()
 
@@ -51,8 +60,8 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        val imageView:ImageView = findViewById(R.id.home_add_cart)
-        val profile:ImageView =findViewById(R.id.profile)
+//        val imageView:ImageView = findViewById(R.id.home_add_cart)
+
 
         imageId = arrayOf(
             R.drawable.w_dress4,
@@ -144,19 +153,84 @@ class MainActivity : AppCompatActivity() {
         newArrayList = arrayListOf<shop>()
         getUserData()
 
-        profile.setOnClickListener{
-            val intent = Intent(this,ProfileActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        imageView.setOnClickListener{
-            val intent = Intent(this, add_cart_activity::class.java)
-            startActivity(intent)
-            finish()
-        }
+
+//        imageView.setOnClickListener{
+//            val intent = Intent(this, add_cart_activity::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
 
     }
+    private fun loadNavigationDrawer() {
+        navView = findViewById(R.id.nav_view)
+        drawerLayout = findViewById(R.id.drawer_layout)
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
 
+        val drawerDelay: Long = 150 //delay of the drawer to close
+        navView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+
+                R.id.nav_Home -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    Handler().postDelayed({ ProfileActivity() }, drawerDelay)
+                }
+                R.id.nav_profile -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    Handler().postDelayed({
+                        startActivity(
+                            Intent(
+                                this,
+                                ProfileActivity::class.java
+                            )
+                        )
+                    }, drawerDelay)
+                }
+                R.id.nav_my_cart -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    Handler().postDelayed({
+                        startActivity(
+                            Intent(
+                                this,
+                                add_cart_activity::class.java
+                            )
+                        )
+                    }, drawerDelay)
+                }
+                R.id.nav_orders_payment -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    Handler().postDelayed({
+                        startActivity(
+                            Intent(
+                                this,
+                                PaymentActivity::class.java
+                            )
+                        )
+                    }, drawerDelay)
+                }
+
+                R.id.nav_log_out -> {
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    logOutUser()
+                }
+            }
+            true
+        }
+
+        findViewById<ImageView>(R.id.nav_drawer_opener_iv).setOnClickListener {
+            if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                drawerLayout.openDrawer(GravityCompat.START)
+            }
+        }
+    }
+    private fun logOutUser() {
+
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+    }
     private fun getUserData() {
 
         for(i in imageId.indices)
@@ -184,11 +258,11 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    fun logoutUser(view: View) {
-        startActivity(Intent(this, LoginActivity::class.java))
-        finish()
-
-    }
+//    fun logoutUser(view: View) {
+//        startActivity(Intent(this, LoginActivity::class.java))
+//        finish()
+//
+//    }
 
     override fun onPause() {
         super.onPause()
